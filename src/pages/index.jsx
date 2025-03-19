@@ -163,7 +163,7 @@ const Home = ({ comcastGithubIo }) => {
               .map((item) => <div className="{item}" key={item.url}><img src={`${process.env.ASSET_PREFIX}${item.image}`} alt="" /><p><a href={item.url}>{item.title}</a></p></div>)}
           </FeatureSection>
         </section>
-        <section>
+        {/* <section>
           <h2 id="events">{eventsSection.title}</h2>
           {eventsSection.blurb && <p>{eventsSection.blurb}</p>}
           <EventList content={eventList
@@ -181,7 +181,7 @@ const Home = ({ comcastGithubIo }) => {
             .slice(0, blogSection.featureCount)}
           />
           <Cta type="messages" color="blue" label={blogSection.cta.label} url={blogSection.cta.url} />
-        </section>
+        </section> */}
       </Layout>
     </>
   );
