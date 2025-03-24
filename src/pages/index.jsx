@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
-import { GraphQLClient, gql } from 'graphql-request';
+import PropTypes from "prop-types";
+import { GraphQLClient, gql } from "graphql-request";
 // import useSWR from 'swr';
-import Head from 'next/head';
-import Layout from 'src/components/Layout';
-import Jumbotron from 'src/components/Jumbotron';
-import TabList from 'src/components/TabList';
-import Cta from 'src/components/Cta';
-import ArticleList from 'src/components/ArticleList';
-import EventList from 'src/components/EventList';
-import FeatureSection from 'src/components/FeatureSection';
+import Head from "next/head";
+import Layout from "src/components/Layout";
+import Jumbotron from "src/components/Jumbotron";
+import TabList from "src/components/TabList";
+import Cta from "src/components/Cta";
+import ArticleList from "src/components/ArticleList";
+import EventList from "src/components/EventList";
+import FeatureSection from "src/components/FeatureSection";
 import {
   title,
   overview,
@@ -19,24 +19,25 @@ import {
   communitySection,
   eventsSection,
   blogSection,
-} from '../data/home.json';
-import { eventList } from '../data/events.json';
-import { affiliates } from '../data/community.json';
-import { blogList } from '../data/blog.json';
-import { projects } from '../data/projects.json';
+} from "../data/home.json";
+import { eventList } from "../data/events.json";
+import { affiliates } from "../data/community.json";
+import { blogList } from "../data/blog.json";
+import { projects } from "../data/projects.json";
 
 export async function getStaticProps() {
-  const site_stats = await fetch("https://osstats.opensource.comcast.net/site-stats")
-    .then(response => response.json());
+  const site_stats = await fetch(
+    "https://osstats.opensource.comcast.net/site-stats"
+  ).then((response) => response.json());
   return {
     props: {
       comcastGithubIo: site_stats.repository,
-    }
+    },
   };
 }
 
 const Home = ({ comcastGithubIo }) => {
-  const plural = (number) => (number > 1 ? 's' : '');
+  const plural = (number) => (number > 1 ? "s" : "");
   const ago = (timestamp) => {
     const now = new Date();
     const then = new Date(timestamp);
@@ -60,9 +61,17 @@ const Home = ({ comcastGithubIo }) => {
     }
     if (hoursAgo >= 24) {
       time = Math.floor(hoursAgo / 24);
-      return <><strong>{time}</strong> day{plural(time)} ago</>;
+      return (
+        <>
+          <strong>{time}</strong> day{plural(time)} ago
+        </>
+      );
     }
-    return <><strong>{hoursAgo}</strong> hour{plural(hoursAgo)} ago</>;
+    return (
+      <>
+        <strong>{hoursAgo}</strong> hour{plural(hoursAgo)} ago
+      </>
+    );
   };
 
   return (
@@ -76,12 +85,18 @@ const Home = ({ comcastGithubIo }) => {
         <meta property="og:url" content="https://comcast.github.io/" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={overview || description} />
-        <meta property="og:image" content={`${process.env.ASSET_PREFIX}/images/favicon/android-chrome-512x512.png`} />
+        <meta
+          property="og:image"
+          content={`${process.env.ASSET_PREFIX}/images/favicon/android-chrome-512x512.png`}
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@comcast" />
         <meta name="twitter:creator" content="@comcast" />
-        <meta name="twitter:image" content={`${process.env.ASSET_PREFIX}/images/favicon/android-chrome-512x512.png`} />
+        <meta
+          name="twitter:image"
+          content={`${process.env.ASSET_PREFIX}/images/favicon/android-chrome-512x512.png`}
+        />
         <meta name="twitter:image:alt" content={title} />
       </Head>
       <Layout>
@@ -91,7 +106,7 @@ const Home = ({ comcastGithubIo }) => {
             {overview && <p className="overview">{overview}</p>}
             {description && <p>{description}</p>}
           </section>
-          <FeatureSection image="/comcast_open_source_profile.svg" alt="Comcast Open Source Site Details" color="mercury">
+          {/* <FeatureSection image="/comcast_open_source_profile.svg" alt="Comcast Open Source Site Details" color="mercury">
             <div className="bug">
               <h3>GitHub Repo</h3>
               <p><a href={comcastGithubIo.url}>{comcastGithubIo.name}</a></p>
@@ -124,25 +139,42 @@ const Home = ({ comcastGithubIo }) => {
               <h3>Tags</h3>
               <p>{comcastGithubIo.repositoryTopics.edges.map((topic, index) => (`${topic.node.topic.name}${index < comcastGithubIo.repositoryTopics.edges.length - 1 ? ', ' : ''}`))}</p>
             </div>
-          </FeatureSection>
+          </FeatureSection> */}
         </section>
         <section className="repo">
           <h2 id="projects">{projectsSection.title}</h2>
-          <TabList items={projects.featuredProjects.list
-            .sort((a, b) => new Date(a.date) - new Date(b.date))}
+          <TabList
+            items={projects.featuredProjects.list.sort(
+              (a, b) => new Date(a.date) - new Date(b.date)
+            )}
           />
-          <Cta type="chip" color="yellow" label={projectsSection.cta.label} url={projectsSection.cta.url} />
+          <Cta
+            type="chip"
+            color="yellow"
+            label={projectsSection.cta.label}
+            url={projectsSection.cta.url}
+          />
           <hr className="rainbowSegment" />
         </section>
         <section>
           <h2 id="people">{peopleSection.title}</h2>
           {peopleSection.blurb && <p>{peopleSection.blurb}</p>}
-          <Cta type="avatar" color="orange" label={peopleSection.cta.label} url={peopleSection.cta.url} />
+          <Cta
+            type="avatar"
+            color="orange"
+            label={peopleSection.cta.label}
+            url={peopleSection.cta.url}
+          />
         </section>
         <section>
           <h2 id="community">{communitySection.title}</h2>
           {communitySection.blurb && <p>{communitySection.blurb}</p>}
-          <Cta type="people" color="red" label={communitySection.cta.label} url={communitySection.cta.url} />
+          <Cta
+            type="people"
+            color="red"
+            label={communitySection.cta.label}
+            url={communitySection.cta.url}
+          />
           <FeatureSection
             title={communitySection.feature.title}
             description={communitySection.feature.description}
@@ -150,12 +182,17 @@ const Home = ({ comcastGithubIo }) => {
             link={communitySection.feature.link.label}
             url={communitySection.feature.link.url}
           >
-            {affiliates.list
-              .slice(0, 3)
-              .map((item) => <div className="{item}" key={item.url}><img src={`${process.env.ASSET_PREFIX}${item.image}`} alt="" /><p><a href={item.url}>{item.title}</a></p></div>)}
+            {affiliates.list.slice(0, 3).map((item) => (
+              <div className="{item}" key={item.url}>
+                <img src={`${process.env.ASSET_PREFIX}${item.image}`} alt="" />
+                <p>
+                  <a href={item.url}>{item.title}</a>
+                </p>
+              </div>
+            ))}
           </FeatureSection>
         </section>
-        <section>
+        {/* <section>
           <h2 id="events">{eventsSection.title}</h2>
           {eventsSection.blurb && <p>{eventsSection.blurb}</p>}
           <EventList content={eventList
@@ -173,7 +210,7 @@ const Home = ({ comcastGithubIo }) => {
             .slice(0, blogSection.featureCount)}
           />
           <Cta type="messages" color="blue" label={blogSection.cta.label} url={blogSection.cta.url} />
-        </section>
+        </section> */}
       </Layout>
     </>
   );
@@ -194,11 +231,13 @@ Home.propTypes = {
     }),
     repositoryTopics: PropTypes.shape({
       totalCount: PropTypes.number,
-      edges: PropTypes.arrayOf(PropTypes.shape({
-        node: PropTypes.shape({
-          topic: PropTypes.shape({ name: PropTypes.string }),
-        }),
-      })),
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            topic: PropTypes.shape({ name: PropTypes.string }),
+          }),
+        })
+      ),
     }),
   }),
 };

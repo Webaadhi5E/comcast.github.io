@@ -7,18 +7,7 @@ const Nav = () => {
   const [open, setOpen] = useState(null);
   const navOpenRef = useRef(null);
   const navCloseRef = useRef(null);
-  const navItems = [
-    { href: `${process.env.ASSET_PREFIX}/`, label: "About" },
-    { href: `${process.env.ASSET_PREFIX}/projects`, label: "Projects" },
-    { href: `${process.env.ASSET_PREFIX}/people`, label: "Talks" },
-    { href: `${process.env.ASSET_PREFIX}/community`, label: "Community" },
-    { href: `${process.env.ASSET_PREFIX}/events`, label: "Events" },
-    { href: `${process.env.ASSET_PREFIX}/blog`, label: "News" },
-    {
-      href: `${process.env.ASSET_PREFIX}/cybersecurity_research`,
-      label: "Cybersecurity",
-    },
-  ];
+
   useEffect(() => {
     if (open === null) {
       return;
@@ -81,11 +70,29 @@ const Nav = () => {
         ref={navCloseRef}
       />
       <ul>
-        {navItems.map((item, index) => (
-          <li key={index}>
-            <Link href={item.href}>{item.label}</Link>
-          </li>
-        ))}
+        <li>
+          <Link href={`${process.env.ASSET_PREFIX}/`}>About</Link>
+        </li>
+        <li>
+          <Link href={`${process.env.ASSET_PREFIX}/projects`}>Projects</Link>
+        </li>
+        <li>
+          <Link href={`${process.env.ASSET_PREFIX}/people`}>Talks</Link>
+        </li>
+        <li>
+          <Link href={`${process.env.ASSET_PREFIX}/community`}>Community</Link>
+        </li>
+        {/* <li>
+          <Link href={`${process.env.ASSET_PREFIX}/events`}>Events</Link>
+        </li>
+        <li>
+          <Link href={`${process.env.ASSET_PREFIX}/blog`}>News</Link>
+        </li> */}
+        <li>
+          <Link href={`${process.env.ASSET_PREFIX}/cybersecurity_research`}>
+            Cybersecurity
+          </Link>
+        </li>
       </ul>
     </nav>
   );
