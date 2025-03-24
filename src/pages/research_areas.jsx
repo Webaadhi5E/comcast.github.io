@@ -22,6 +22,13 @@ const ResearchAreas = () => {
   const [selectedPublications, setSelectedPublications] = useState([]);
   const [showClearAll, setShowClearAll] = useState(false);
   const { title } = useRouter().query;
+  const tagShortNames = {
+    cybersecurity: "cy",
+    privacy_engineering: "pr",
+    emerging_technologies: "et",
+    evidence_based_public_policy: "ev",
+  };
+
   function execute_search(value) {
     setSearchTerm(value);
     if (value != "") {
@@ -136,6 +143,12 @@ const ResearchAreas = () => {
     execute_search;
   }, [searchTerm]);
 
+  const shortTitle = tagShortNames[title];
+  const filteredResults = searchResults.filter((element) =>
+    element["tag"].includes(shortTitle)
+  );
+  const filterResultCount = filteredResults.length;
+
   return (
     <>
       {" "}
@@ -223,7 +236,7 @@ const ResearchAreas = () => {
               </svg>
             </div>
             <div className="results_count">
-              1-{searchResults.length} of {data.length} Results
+              1-{filterResultCount} of {data.length} Results
             </div>
           </div>
           <div className="filter_panel">
@@ -245,14 +258,14 @@ const ResearchAreas = () => {
               />
               <Multiselect
                 className="multiselect_publications"
-                options={multiFilterData.Publications}
+                options={multiFilterData.Types}
                 selectedValues={selectedPublications}
                 onSelect={onSelectPublications}
                 onRemove={onRemovePublications}
                 displayValue="category"
                 showCheckbox={true}
-                placeholder="Publications"
-                emptyRecordMsg="No Publications found"
+                placeholder="Types"
+                emptyRecordMsg="No Types found"
                 // hidePlaceholder={false}
                 hideSelectedList={true}
                 avoidHighlightFirstOption={true}
@@ -301,8 +314,8 @@ const ResearchAreas = () => {
                   ))}
               </div>
             )}
-            {searchResults &&
-              searchResults.map((item, index) => (
+            {filterResultCount ? (
+              filteredResults.map((item, index) => (
                 <div key={index} className="result_card_container">
                   <div className="result_category">{item.category}</div>
                   <div className="result_card">
@@ -371,7 +384,10 @@ const ResearchAreas = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              ))
+            ) : (
+              <div className="no_results">No Records found</div>
+            )}
             {searchResults.length == 0 && (
               <div className="no_results">No Records found</div>
             )}

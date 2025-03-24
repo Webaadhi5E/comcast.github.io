@@ -53,18 +53,18 @@ const CybersecurityResearch = () => {
       <Layout>
         <Header image={featuredImage} color={color} title=""></Header>
         <ResearchHeader />
-    
+
         <div className="about_cybersecurity">
           <h2>Who are we?</h2>
           <section>{sections["about"]}</section>
         </div>
-  
+
         <div>
           <h2>Research Areas</h2>
           <section className="research_areas">
             {sections["research_areas"].map((item, research_area_index) => (
               <div
-                key="research_area_index"
+                key={research_area_index}
                 onClick={() => load_cybersecurity_research(research_area_index)}
               >
                 {item}

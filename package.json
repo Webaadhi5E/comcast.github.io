@@ -57,9 +57,10 @@
     "y18n": "~4.0.1"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-react-html-attrs": "^3.0.5",
     "eslint": "^7.12.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.1",
