@@ -142,11 +142,11 @@ const Home = ({ comcastGithubIo }) => {
           <Cta type="chip" color="yellow" label={projectsSection.cta.label} url={projectsSection.cta.url} />
           <hr className="rainbowSegment" />
         </section>
-        <section>
+        {/* <section>
           <h2 id="people">{peopleSection.title}</h2>
           {peopleSection.blurb && <p>{peopleSection.blurb}</p>}
           <Cta type="avatar" color="orange" label={peopleSection.cta.label} url={peopleSection.cta.url} />
-        </section>
+        </section> */}
         <section>
           <h2 id="community">{communitySection.title}</h2>
           {communitySection.blurb && <p>{communitySection.blurb}</p>}
