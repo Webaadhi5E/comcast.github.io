@@ -17,7 +17,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "cy"
+        "cyber_sec"
       ]
     },
     {
@@ -34,7 +34,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "cy"
+        "cyber_sec"
       ]
     },
     {
@@ -54,7 +54,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "et"
+        "emerging_tech"
       ]
     },
     {
@@ -71,7 +71,7 @@
       "link": "https://www.cisa.gov/sites/default/files/2024-02/2024.02.12_DRAFT_NSTACM%26IReport_508c.pdf",
       "publications": "cybersecurity",
       "tag": [
-        "pr"
+        "priv_eng"
       ]
     },
     {
@@ -87,8 +87,8 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "pr",
-        "cy"
+        "priv_eng",
+        "cyber_sec"
       ]
     },
     {
@@ -104,7 +104,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -121,7 +121,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "et"
+        "emerging_tech"
       ]
     },
     {
@@ -137,7 +137,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -153,7 +153,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -169,7 +169,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "pr"
+        "priv_eng"
       ]
     },
     {
@@ -185,7 +185,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -201,7 +201,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "cy"
+        "cyber_sec"
       ]
     },
     {
@@ -217,7 +217,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -234,7 +234,7 @@
       "link": "https://www.usenix.org/conference/soups2024/presentation/trimananda",
       "publications": "talks",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -251,7 +251,7 @@
       "link": "https://digitalprivacy.ieee.org/events/digital-privacy-workshop",
       "publications": "talks",
       "tag": [
-        "pr"
+        "priv_eng"
       ]
     },
     {
@@ -268,7 +268,7 @@
       "link": "https://lascon.org/past-lascon-2024/",
       "publications": "talks",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -285,7 +285,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "cy"
+        "cyber_sec"
       ]
     },
     {
@@ -302,7 +302,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -319,7 +319,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "pr"
+        "priv_eng"
       ]
     },
     {
@@ -335,7 +335,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "et"
+        "emerging_tech"
       ]
     },
     {
@@ -351,7 +351,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -367,7 +367,7 @@
       "link": "",
       "publications": "privacy-engineering",
       "tag": [
-        "pr"
+        "priv_eng"
       ]
     },
     {
@@ -385,7 +385,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "cy"
+        "cyber_sec"
       ]
     },
     {
@@ -401,7 +401,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "et"
+        "emerging_tech"
       ]
     },
     {
@@ -420,7 +420,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -437,7 +437,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "et"
+        "emerging_tech"
       ]
     },
     {
@@ -456,7 +456,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "cy"
+        "cyber_sec"
       ]
     },
     {
@@ -474,7 +474,7 @@
       "link": "",
       "publications": "talks",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -494,7 +494,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "cy"
+        "cyber_sec"
       ]
     },
     {
@@ -512,7 +512,7 @@
       "link": "https://www.usenix.org/publications/loginonline/analysis-open-source-automated-threat-modeling-tools-and-their",
       "publications": "cybersecurity",
       "tag": [
-        "et"
+        "emerging_tech"
       ]
     },
     {
@@ -528,7 +528,7 @@
       "link": "",
       "publications": "emerging-technologies",
       "tag": [
-        "cy"
+        "cyber_sec"
       ]
     },
     {
@@ -544,7 +544,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -560,7 +560,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "cy"
+        "cyber_sec"
       ]
     },
     {
@@ -576,7 +576,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "et"
+        "emerging_tech"
       ]
     },
     {
@@ -597,7 +597,7 @@
       "link": "https://academic.oup.com/cybersecurity/article/7/1/tyab013/6289827?login=false",
       "publications": "cybersecurity",
       "tag": [
-        "et"
+        "emerging_tech"
       ]
     },
     {
@@ -614,7 +614,7 @@
       "link": "https://www.scitepress.org/Papers/2021/102952/102952.pdf",
       "publications": "cybersecurity",
       "tag": [
-        "et"
+        "emerging_tech"
       ]
     },
     {
@@ -632,7 +632,7 @@
       "link": "https://www.usenix.org/publications/loginonline/squeezing-cybersecurity-lemons-%E2%80%93-labeling-regime-iot-products",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -649,7 +649,7 @@
       "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3896578",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -667,7 +667,7 @@
       "link": "https://www.nctatechnicalpapers.com/Paper/2021/2021-hidden-risk-of-unpopularity-in-open-source",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -685,7 +685,7 @@
       "link": "https://www.nctatechnicalpapers.com/Paper/2021/2021-navigating-the-transition-to-a-post-quantum-world",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -706,7 +706,7 @@
       "link": "https://www.nctatechnicalpapers.com/Paper/2021/2021-hitchhiker-s-guide-to-quantum-key-distribution",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -723,7 +723,7 @@
       "link": "https://wagtail-prod-storage.s3.amazonaws.com/documents/2095_Rashidi_3494_paper.pdf",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -739,7 +739,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -755,7 +755,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -771,7 +771,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -789,7 +789,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -805,7 +805,7 @@
       "link": "",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -823,7 +823,7 @@
       "link": "https://www.henrystewartpublications.com/csj/v4",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -842,7 +842,7 @@
       "link": "https://walterkrawec.org/papers/qkd-survey.pdf",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -859,7 +859,7 @@
       "link": "https://www.blackhat.com/us-20/arsenal/schedule/#xgitguard-detecting-publicly-exposed-secrets-on-github-at-scale-21188",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -876,7 +876,7 @@
       "link": "https://www.csiac.org/journal-article/staying-ahead-of-the-race-quantum-computing-and-cybersecurity/",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -893,7 +893,7 @@
       "link": "https://www.blackhat.com/us-20/arsenal/schedule/#xgitguard-detecting-publicly-exposed-secrets-on-github-at-scale-21188",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     },
     {
@@ -910,7 +910,7 @@
       "link": "https://youtu.be/9w8wr5AxMxA",
       "publications": "cybersecurity",
       "tag": [
-        "ev"
+        "evi_pub_policy"
       ]
     }
   ]

@@ -1021,8 +1021,6 @@ a.cta:focus:after {
   font-size: 15px;
   cursor: pointer;
   display: flex;
-  padding-left: 2px;
-  padding-right: 2px;
   gap: 0.1rem;
   justify-content: center;
   align-items: center;
