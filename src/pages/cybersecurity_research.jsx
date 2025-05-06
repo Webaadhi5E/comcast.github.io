@@ -30,10 +30,16 @@ const CybersecurityResearch = () => {
       <Head>
         <title>Open Source Software {title} at Comcast</title>
         <meta name="description" content={overview || description} />
-        <meta rel="canonical" content="https://comcast.github.io/" />
+        <meta
+          rel="canonical"
+          content="https://webaadhi5e.github.io/comcast.github.io/"
+        />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://comcast.github.io/" />
+        <meta
+          property="og:url"
+          content="https://webaadhi5e.github.io/comcast.github.io/"
+        />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={overview || description} />
         <meta

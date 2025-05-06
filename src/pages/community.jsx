@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import Head from 'next/head';
-import Layout from 'src/components/Layout';
-import Header from 'src/components/Header';
-import Cta from 'src/components/Cta';
-import ArticleList from 'src/components/ArticleList';
-import Document from 'src/components/Document';
-import { getDoc } from 'src/shared/getDoc';
+import PropTypes from "prop-types";
+import Head from "next/head";
+import Layout from "src/components/Layout";
+import Header from "src/components/Header";
+import Cta from "src/components/Cta";
+import ArticleList from "src/components/ArticleList";
+import Document from "src/components/Document";
+import { getDoc } from "src/shared/getDoc";
 import {
   title,
   featuredImage,
@@ -16,11 +16,17 @@ import {
   grants,
   socialMedia,
   affiliates,
-} from 'src/data/community.json';
+} from "src/data/community.json";
 
 export async function getStaticProps() {
-  const contributeMarkdown = `##${getDoc('CONTRIBUTING.md').replace(/## /gi, '#### ')} \n---\n&mdash; Source: [CONTRIBUTING.md](https://github.com/Comcast/Comcast.github.io/blob/main/CONTRIBUTING.md)`;
-  const conductMarkdown = `##${getDoc('CODE_OF_CONDUCT.md').replace(/## /gi, '#### ')} \n---\n&mdash; Source: [CODE_OF_CONDUCT.md](https://github.com/Comcast/Comcast.github.io/blob/main/CODE_OF_CONDUCT.md)`;
+  const contributeMarkdown = `##${getDoc("CONTRIBUTING.md").replace(
+    /## /gi,
+    "#### "
+  )} \n---\n&mdash; Source: [CONTRIBUTING.md](https://github.com/Comcast/Comcast.github.io/blob/main/CONTRIBUTING.md)`;
+  const conductMarkdown = `##${getDoc("CODE_OF_CONDUCT.md").replace(
+    /## /gi,
+    "#### "
+  )} \n---\n&mdash; Source: [CODE_OF_CONDUCT.md](https://github.com/Comcast/Comcast.github.io/blob/main/CODE_OF_CONDUCT.md)`;
 
   return {
     props: {
@@ -35,19 +41,31 @@ const Community = ({ contributeMarkdown, conductMarkdown }) => (
     <Head>
       <title>{title} of Open Source Software at Comcast</title>
       <meta name="description" content={overview || description} />
-      <meta rel="canonical" content="https://comcast.github.io/" />
+      <meta
+        rel="canonical"
+        content="https://webaadhi5e.github.io/comcast.github.io/"
+      />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://comcast.github.io/" />
+      <meta
+        property="og:url"
+        content="https://webaadhi5e.github.io/comcast.github.io/"
+      />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={overview || description} />
-      <meta property="og:image" content={`${process.env.ASSET_PREFIX}${featuredImage}`} />
+      <meta
+        property="og:image"
+        content={`${process.env.ASSET_PREFIX}${featuredImage}`}
+      />
 
       {/* <meta name="twitter:card" content="summary" /> */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@comcast" />
       <meta name="twitter:creator" content="@comcast" />
-      <meta name="twitter:image" content={`${process.env.ASSET_PREFIX}${featuredImage}`} />
+      <meta
+        name="twitter:image"
+        content={`${process.env.ASSET_PREFIX}${featuredImage}`}
+      />
       <meta name="twitter:image:alt" content={title} />
     </Head>
     <Layout>
@@ -63,9 +81,17 @@ const Community = ({ contributeMarkdown, conductMarkdown }) => (
       </section>
       <section>
         <h2 id="grants">{grants.title}</h2>
-        <img src={`${process.env.ASSET_PREFIX}${grants.image}`} alt="Comcast Innovation Fund" />
+        <img
+          src={`${process.env.ASSET_PREFIX}${grants.image}`}
+          alt="Comcast Innovation Fund"
+        />
         {grants.description && <p>{grants.description}</p>}
-        <Cta type="chip" color="blue" label={grants.cta.label} url={grants.cta.url} />
+        <Cta
+          type="chip"
+          color="blue"
+          label={grants.cta.label}
+          url={grants.cta.url}
+        />
       </section>
       {/* <section>
         <h2 id="socialMedia">{socialMedia.title}</h2>
@@ -83,12 +109,18 @@ const Community = ({ contributeMarkdown, conductMarkdown }) => (
           </div>
         </div>
       </section> */}
-      <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8" />
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charSet="utf-8"
+      />
       <section>
         <h2 id="affiliates">{affiliates.title}</h2>
         {affiliates.description && <p>{affiliates.description}</p>}
-        <ArticleList content={affiliates.list
-          .sort((a, b) => new Date(b.date) - new Date(a.date))}
+        <ArticleList
+          content={affiliates.list.sort(
+            (a, b) => new Date(b.date) - new Date(a.date)
+          )}
         />
       </section>
       <section>

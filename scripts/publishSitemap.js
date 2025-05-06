@@ -38,7 +38,7 @@ const sitemapXml = `<?xml version='1.0' encoding='UTF-8'?>
     )
     .join("")}
   <url>
-    <loc>https://comcast.github.io/humans.txt</loc>
+    <loc>https://webaadhi5e.github.io/comcast.github.io/humans.txt</loc>
     <lastmod>${
       publicObj["/humans"].lastModified
         ? formatDate(new Date(publicObj["/humans"].lastModified))
