@@ -12,7 +12,7 @@ import {
   featuredImage,
   color,
   pages,
-} from "src/data/research_areas.json";
+} from "src/data/research_areas_papers.json";
 import { data } from "src/data/research_areas_data.json";
 import Clear from "src/components/Icon/Clear";
 import SearchIcon from "src/components/Icon/Search";
