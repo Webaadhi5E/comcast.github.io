@@ -190,7 +190,7 @@ const ResearchAreas = () => {
       </Head>
       <Layout>
         <div className="go_to_cybersecurity_research">
-          <a href="/cybersecurity_research">
+          <a href={`${process.env.ASSET_PREFIX}/cybersecurity_research`}>
             <Icon type="leftarrow" color="white" />
             Cybersecurity Research
           </a>
