@@ -34,7 +34,6 @@ module.exports = {
   //   };
   // },
   assetPrefix,
-  trailingSlash: true,
   webpack: (config) => {
     config.plugins.push(
       new webpack.DefinePlugin({
