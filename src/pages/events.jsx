@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import Header from 'src/components/Header';
-import Layout from 'src/components/Layout';
-import EventList from 'src/components/EventList';
+import Head from "next/head";
+import Header from "src/components/Header";
+import Layout from "src/components/Layout";
+import EventList from "src/components/EventList";
 import {
   title,
   overview,
@@ -11,26 +11,38 @@ import {
   upcomingTitle,
   pastTitle,
   eventList,
-} from 'src/data/events.json';
+} from "src/data/events.json";
 
 const Events = () => (
   <>
     <Head>
       <title>{title} of Open Source Software at Comcast</title>
       <meta name="description" content={overview || description} />
-      <meta rel="canonical" content="https://comcast.github.io/" />
+      <meta
+        rel="canonical"
+        content="https://webaadhi5e.github.io/comcast.github.io/"
+      />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://comcast.github.io/" />
+      <meta
+        property="og:url"
+        content="https://webaadhi5e.github.io/comcast.github.io/"
+      />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={overview || description} />
-      <meta property="og:image" content={`${process.env.ASSET_PREFIX}${featuredImage}`} />
+      <meta
+        property="og:image"
+        content={`${process.env.ASSET_PREFIX}${featuredImage}`}
+      />
 
       {/* <meta name="twitter:card" content="summary" /> */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@comcast" />
       <meta name="twitter:creator" content="@comcast" />
-      <meta name="twitter:image" content={`${process.env.ASSET_PREFIX}${featuredImage}`} />
+      <meta
+        name="twitter:image"
+        content={`${process.env.ASSET_PREFIX}${featuredImage}`}
+      />
       <meta name="twitter:image:alt" content={title} />
     </Head>
     <Layout>
@@ -41,16 +53,18 @@ const Events = () => (
       </section>
       <section>
         <h2>{upcomingTitle}</h2>
-        <EventList content={eventList
-          .filter((a) => new Date(a.end) >= Date.parse(new Date()))
-          .sort((a, b) => new Date(a.end) - new Date(b.end))}
+        <EventList
+          content={eventList
+            .filter((a) => new Date(a.end) >= Date.parse(new Date()))
+            .sort((a, b) => new Date(a.end) - new Date(b.end))}
         />
       </section>
       <section>
         <h2>{pastTitle}</h2>
-        <EventList content={eventList
-          .filter((a) => new Date(a.end) <= Date.parse(new Date()))
-          .sort((a, b) => new Date(b.end) - new Date(a.end))}
+        <EventList
+          content={eventList
+            .filter((a) => new Date(a.end) <= Date.parse(new Date()))
+            .sort((a, b) => new Date(b.end) - new Date(a.end))}
         />
       </section>
     </Layout>
