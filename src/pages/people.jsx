@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import Head from 'next/head';
-import Layout from 'src/components/Layout';
-import Header from 'src/components/Header';
-import Event from 'src/components/Event';
-import Filter from 'src/components/Filter';
-import ArticleList from 'src/components/ArticleList';
+import { useState } from "react";
+import Head from "next/head";
+import Layout from "src/components/Layout";
+import Header from "src/components/Header";
+import Event from "src/components/Event";
+import Filter from "src/components/Filter";
+import ArticleList from "src/components/ArticleList";
 import {
   title,
   overview,
@@ -14,8 +14,8 @@ import {
   conference,
   talksTitle,
   talksList,
-} from 'src/data/people.json';
-import speakers from 'src/data/profiles.json';
+} from "src/data/people.json";
+import speakers from "src/data/profiles.json";
 
 const People = () => {
   const [keyword, setKeyword] = useState(null);
@@ -53,8 +53,10 @@ const People = () => {
       //   );
       // }
       if (keyword && !projectLanguage) {
-        return data.title.toLowerCase().includes(keyword?.toLowerCase())
-        || data.author.toLowerCase().includes(keyword?.toLowerCase());
+        return (
+          data.title.toLowerCase().includes(keyword?.toLowerCase()) ||
+          data.author.toLowerCase().includes(keyword?.toLowerCase())
+        );
       }
       // if (!keyword && projectLanguage) {
       //   return data.node.languages.edges
@@ -71,19 +73,31 @@ const People = () => {
       <Head>
         <title>{title} of Open Source Software at Comcast</title>
         <meta name="description" content={overview || description} />
-        <meta rel="canonical" content="https://comcast.github.io/" />
+        <meta
+          rel="canonical"
+          content="https://webaadhi5e.github.io/comcast.github.io/"
+        />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://comcast.github.io/" />
+        <meta
+          property="og:url"
+          content="https://webaadhi5e.github.io/comcast.github.io/"
+        />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={overview || description} />
-        <meta property="og:image" content={`${process.env.ASSET_PREFIX}${featuredImage}`} />
+        <meta
+          property="og:image"
+          content={`${process.env.ASSET_PREFIX}${featuredImage}`}
+        />
 
         {/* <meta name="twitter:card" content="summary" /> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@comcast" />
         <meta name="twitter:creator" content="@comcast" />
-        <meta name="twitter:image" content={`${process.env.ASSET_PREFIX}${featuredImage}`} />
+        <meta
+          name="twitter:image"
+          content={`${process.env.ASSET_PREFIX}${featuredImage}`}
+        />
         <meta name="twitter:image:alt" content={title} />
       </Head>
       <Layout>

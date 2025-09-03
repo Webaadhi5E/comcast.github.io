@@ -1,7 +1,7 @@
-const webpack = require('webpack');
+const webpack = require("webpack");
 // const path = require('path');
-const isProd = (process.env.NODE_ENV || 'production') === 'production';
-const assetPrefix = isProd ? '' : '';
+const isProd = (process.env.NODE_ENV || "production") === "production";
+const assetPrefix = isProd ? "/comcast.github.io" : "";
 
 module.exports = {
   // future: {
@@ -20,7 +20,7 @@ module.exports = {
   cssModules: true,
   cssLoaderOptions: {
     importLoaders: 1,
-    localIdentName: '[local]___[hash:base64:5]',
+    localIdentName: "[local]___[hash:base64:5]",
     url: false,
   },
   // exportPathMap() {
@@ -37,18 +37,18 @@ module.exports = {
   webpack: (config) => {
     config.plugins.push(
       new webpack.DefinePlugin({
-        'process.env.ASSET_PREFIX': JSON.stringify(assetPrefix),
-      }),
+        "process.env.ASSET_PREFIX": JSON.stringify(assetPrefix),
+      })
     );
     config.resolve.modules.push(__dirname);
     config.module.rules.push({
       test: /\.svg$/,
       use: [
         {
-          loader: 'babel-loader',
+          loader: "babel-loader",
         },
         {
-          loader: 'react-svg-loader',
+          loader: "react-svg-loader",
           options: {
             jsx: true, // true outputs JSX tags
           },
